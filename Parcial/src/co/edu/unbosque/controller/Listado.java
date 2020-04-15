@@ -62,8 +62,8 @@ public class Listado extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(request.getAttribute("FiltroNombre"));
-		Estudiante ez = filtrar((String)request.getAttribute("FiltroNombre"), (String) request.getAttribute("FiltroID"));
+		System.out.println(request.getParameter("bNombre"));
+		Estudiante ez = filtrar((String)request.getParameter("bNombre"), (String) request.getParameter("bDocumento"));
 		if ( ez != null){
 			request.setAttribute("Nombre", ez.getNombre());
 			request.setAttribute("Edad", ez.getEdad());

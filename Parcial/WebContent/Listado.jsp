@@ -49,20 +49,20 @@
 </table>
 	
 <form action="Listado" method="POST">
-<input type="text" id="Nombre">
-<input type="text" id="Documento">
-<input type="submit" value="Buscar">
+	<input type="text" id="bNombre" name = "bNombre">
+	<input type="text" id="bDocumento" name="bDocumento">
+	<input type="submit" value="Buscar">
 </form>
 
-<%= "Nombre : " + request.getParameter("Nombre") %>
-<%= "Genero: " + request.getParameter("Genero") %>
-<%= "Documento: " + request.getParameter("nID") %>
-<%= "Promedio: " + request.getParameter("Nombre") %>
-<%= "Edad: " + request.getParameter("Edad") %>
-<%= "Carrera: " + request.getParameter("Carrera") %>
-<%= "Semestre: " + request.getParameter("Semestre") %>
-<%= "Estado: " + request.getParameter("Estado") %> </br>
-<%= "DIreccion Ip: " + request.getParameter("IP") %> </br>
-<%= "Fecha: " + request.getParameter("fecha") %>                              
+Nombre  ${Nombre}
+Genero ${Genero}
+Documento:  ${nID}
+Promedio: ${Promedio}
+Edad: ${Edad}
+Carrera: ${Carrera}
+Semestre: ${Semestre}
+Estado : ${Estado} </br>
+</br>
+<%= "Fecha: " %>                              
 </body>
 </html>
