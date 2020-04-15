@@ -50,70 +50,16 @@ public class Controller extends HttpServlet {
 		miDis.forward(request, response);
 	}
 
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 * 
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		RequestDispatcher miDis = request.getRequestDispatcher("/estadisticas.jsp");
+		miDis.forward(request, response);
+
 	}
 
-
-	public ArrayList<String> separarPorNombre(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getNombre());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorEdad(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getEdad());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorGenero(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getGenero());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorCarrera(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getCarrera());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorDocumento(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getDocumento());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorSemestre(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getSemestre());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorPromedio(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getPromedio());
-		}
-		return nombres;
-	}
-	public ArrayList<String> separarPorEstado(){
-		ArrayList<String> nombres = new ArrayList<String>();
-		for (Estudiante i : estudiantes) {
-			nombres.add(i.getEstado());
-		}
-		return nombres;
-	}
 
 }
