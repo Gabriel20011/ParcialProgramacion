@@ -30,7 +30,8 @@
 	<h2>Numero de mujeres: ${nMujeres}</h2>
 	<h2>Numero de Estudiantes (EDAD < 18 AÑOS): ${nMenores}</h2>
 	<h2>Numero de Estudiantes (EDAD > 18 AÑOS): ${nMayores}</h2>
-	<h2>Fecha ${ }</h2>
+	<h2>Fecha: ${fecha}</h2>
+	<h2>Ip: ${IP}</h2>
 	
 </body>
 </html>
