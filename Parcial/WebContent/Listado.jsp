@@ -61,8 +61,8 @@
 <%= "Edad: " + request.getParameter("Edad") %>
 <%= "Carrera: " + request.getParameter("Carrera") %>
 <%= "Semestre: " + request.getParameter("Semestre") %>
-<%= "Estado: " + request.getParameter("Estado") %> </br>
-<%= "DIreccion Ip: " + request.getParameter("IP") %> </br>
+<%= "Estado: " + request.getParameter("Estado") %> 
+<%= "DIreccion Ip: " + request.getParameter("IP") %> 
 <%= "Fecha: " + request.getParameter("fecha") %>                              
 </body>
 </html>
