@@ -2,6 +2,7 @@ package co.edu.unbosque.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,6 +35,8 @@ public class Listado extends HttpServlet {
 
         // TODO Auto-generated constructor stub
     }
+    
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,13 +45,15 @@ public class Listado extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		request.setAttribute("nombres", separarPorNombre());
-		request.setAttribute("edad", separarPorEdad());
-		request.setAttribute("genero", separarPorGenero());
-		request.setAttribute("documento", separarPorNombre());
-		request.setAttribute("carrera", separarPorNombre());
-		request.setAttribute("semestre", separarPorNombre());
-		request.setAttribute("promedio", separarPorNombre());
-		request.setAttribute("estado", separarPorNombre());
+		request.setAttribute("edades", separarPorEdad());
+		request.setAttribute("generos", separarPorGenero());
+		request.setAttribute("documentos", separarPorDocumento());
+		request.setAttribute("carreras", separarPorCarrera());
+		request.setAttribute("semestres", separarPorSemestre());
+		request.setAttribute("promedios", separarPorPromedio());
+		request.setAttribute("estados", separarPorEstado());
+		request.setAttribute("fecha", new Date());
+		request.setAttribute("IP", request.getRemoteAddr());
 		RequestDispatcher iDis = request.getRequestDispatcher("/Listado.jsp");
 		iDis.forward(request, response);
 	}
@@ -57,15 +62,48 @@ public class Listado extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		System.out.println(request.getAttribute("FiltroNombre"));
+		Estudiante ez = filtrar((String)request.getAttribute("FiltroNombre"), (String) request.getAttribute("FiltroID"));
+		if ( ez != null){
+			request.setAttribute("Nombre", ez.getNombre());
+			request.setAttribute("Edad", ez.getEdad());
+			request.setAttribute("Genero", ez.getGenero());
+			request.setAttribute("nID", ez.getDocumento());
+			request.setAttribute("Carrera", ez.getCarrera());
+			request.setAttribute("Promedio", ez.getPromedio());
+			request.setAttribute("Estado", ez.getEstado());
+			request.setAttribute("Semestre", ez.getSemestre());
+		}
+		request.setAttribute("fecha", new Date());
+		request.setAttribute("IP", request.getRemoteAddr());
+		
+		request.setAttribute("nombres", separarPorNombre());
+		request.setAttribute("edades", separarPorEdad());
+		request.setAttribute("generos", separarPorGenero());
+		request.setAttribute("documentos", separarPorDocumento());
+		request.setAttribute("carreras", separarPorCarrera());
+		request.setAttribute("semestres", separarPorSemestre());
+		request.setAttribute("promedios", separarPorPromedio());
+		request.setAttribute("estados", separarPorEstado());
+		RequestDispatcher iDis = request.getRequestDispatcher("/Listado.jsp");
+		iDis.forward(request, response);
+	}
+	
+	public Estudiante filtrar(String nombre, String documento) {
+		for (Estudiante i : estudiantes) {
+			if (i.getNombre().equals(nombre) && i.getDocumento().equals(documento)) {
+				return i;
+			}
+		}
+		return null;
 	}
 
 	public ArrayList<String> separarPorNombre(){
 		ArrayList<String> nombres = new ArrayList<String>();
 		for (Estudiante i : estudiantes) {
 			nombres.add(i.getNombre());
-		}
+		}		dto = new DTO();
+
 		return nombres;
 	}
 	public ArrayList<String> separarPorEdad(){
