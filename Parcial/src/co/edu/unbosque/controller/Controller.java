@@ -46,9 +46,13 @@ public class Controller extends HttpServlet {
 		Date fecha = new Date();
 		request.setAttribute("fecha", fecha);
 		request.setAttribute("IP", ip);
-		RequestDispatcher miDis = request.getRequestDispatcher("/primera.jsp");
-		miDis.forward(request, response);
-
+		String botonPresionado = request.getParameter("submit");
+		if (botonPresionado.equals("listadoCompleto")) {
+			
+		}
+		else {
+			
+		}
 	}
 
 	/**
@@ -56,7 +60,6 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 
