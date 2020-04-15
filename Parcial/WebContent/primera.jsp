@@ -11,11 +11,11 @@
 <h1 align="center">EXAMEN PRÁCTICO CORTE No.2</h1>
 <h1 align="center">U. EL BOSQUE: Seguimiento Estudiantes</h1>
 <img align="left" src="imag/ubosque.png">
-<form name="listadoCompleto">
-<button id= "listadoCompleto" >ver listado completo / consultar</button><br>
+<form action="get">
+<button value= "listadoCompleto" >ver listado completo / consultar</button><br>
 </form>
-<form id = "estadisticas">
-<button id= "estadisicasProgramas">estadistica por programa</button><br>
+<form action="get">
+<button value= "estadisicasProgramas">estadistica por programa</button><br>
 </form>
 
 Gabriel Alejandro Ortega Maricuto   <b>Fecha:</b>${fecha}<br>

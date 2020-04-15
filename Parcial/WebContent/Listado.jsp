@@ -23,31 +23,22 @@
 	<td>PROMEDIO PONDERADO</td>
 	<td>ESTADO</td>
 	</tr>
-	<tr>
+			<tr>
 	<c:forEach items="${nombres}" var="nombre">
-		<td>${nombre}</td>
-	</c:forEach>
-	<c:forEach items="${edad}" var="edad">
-		<td>${edad}</td>
-	</c:forEach><c:forEach items="${genero}" var="genero">
-		<td>${genero}</td>
-	</c:forEach><c:forEach items="${documento}" var="doc">
-		<td>${doc}</td>
-	</c:forEach><c:forEach items="${carrera}" var="car">
-		<td>${car}</td>
-	</c:forEach><c:forEach items="${semestre}" var="sem">
-		<td>${sem}</td>
-	</c:forEach><c:forEach items="${promedio}" var="pro">
-		<td>${pro}</td>
-	</c:forEach><c:forEach items="${estado}" var="est">
-		<td>${est}</td>
-	</c:forEach>
-		</tr>
-	
-
-	
-	
+		<td>${nombre}</td>		
+		</c:forEach>
+								</tr>
+		
 	</table>
+	Nombre: <input type="text"><br>
+	Documento de identificación: <input type="text"><br>
+	<button>Buscar</button><br>
+<pre>Nombre:                                                                    Semestre:<br>
+Documento de identificaion:                                                Promedio Ponderado:<br>
+Carrera:                                                                   Estado:<br>
+	                                                                       fecha:<br>
+	                                                                       IP:</pre>
+	                                     
 </form>
 </body>
 </html>
