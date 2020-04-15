@@ -10,10 +10,10 @@
 <h1 align="center">EXAMEN PRÁCTICO CORTE No.2</h1>
 <h1 align="center">U. EL BOSQUE: Seguimiento Estudiantes</h1>
 <img align="left" src="imag/ubosque.png">
-<form action="Listado" action= "GET">
+<form action="Listado" method= "GET">
 <button name= "listadoCompleto" id= "listadoCompleto" >ver listado completo / consultar</button><br>
 </form>
-<form action= "Post" action="POST">
+<form action= "Post" method="POST">
 
 <button name= "estadisticas" id = "estadisticas">estadistica por programa</button><br>
 <form>
