@@ -12,11 +12,11 @@
 	<h2>LISTADO ESTUDIANTES POR PROGRAMA</h2> <br>
 	<h4>Programa academico</h4>
 	<select id = "ProgAcademico" name="ProgAcademico">
-		<option>Ingenieria Ambiental</option>
-		<option>Ingenieria de Sistemas</option>
-		<option>Ingenieria Electronica</option>
-		<option>Ingenieria Industrial</option>
-		<option>Bioingenieria</option>
+		<option name = "INGENIERIA AMBIENTAL">Ingenieria Ambiental</option>
+		<option name = "INGENIERIA INDUSTRIAL">Ingenieria de Sistemas</option>
+		<option name = "INGENIERIA ELECTRONICA">Ingenieria Electronica</option>
+		<option name = "INGENIERIA INDUSTRIAL">Ingenieria Industrial</option>
+		<option name = "BIOINGENIERIA">Bioingenieria</option>
 	</select> <br>
 	<form action="Estadistica" method="post" >
 		<button id="buscar">Consultar</button>

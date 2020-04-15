@@ -53,6 +53,7 @@ public class Estadistica extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
+		System.out.println(request.getParameter("ProgAcademico"));
 		filtrar(request.getParameter("ProgAcademico"));
 		String ip = request.getRemoteAddr();
 		Date fecha = new Date();
