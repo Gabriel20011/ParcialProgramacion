@@ -13,10 +13,8 @@
 <form action="Listado" method= "GET">
 <button name= "listadoCompleto" id= "listadoCompleto" >ver listado completo / consultar</button><br>
 </form>
-<form action= "Post" method="POST">
+<button name= "estadisticas" id = "estadisticas" onclick="self.location.href = 'estadisticas.jsp'">estadistica por programa</button><br>
 
-<button name= "estadisticas" id = "estadisticas">estadistica por programa</button><br>
-<form>
 Gabriel Alejandro Ortega Maricuto   <b>Fecha:</b>${fecha}<br>
 Juan David Quintero Gaona           <b>IP</b>${IP}<br>
 </body>

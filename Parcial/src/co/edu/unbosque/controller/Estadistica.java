@@ -25,7 +25,7 @@ public class Estadistica extends HttpServlet {
 	private int mas18;
 	private int normal;
 	private int academica;
-	private int prom;
+	private double prom;
 	private int numeroEstudiantes;
        
     /**
@@ -74,7 +74,7 @@ public class Estadistica extends HttpServlet {
 	public void filtrar(String carrera) {
 		for (Estudiante i : estudiantes) {
 			if (i.getCarrera().equals(carrera)){
-				prom+= Integer.parseInt(i.getPromedio());
+				prom += Double.parseDouble(i.getPromedio());
 				numeroEstudiantes++;
 				if(i.getGenero()=="M") {
 					muj++;

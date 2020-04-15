@@ -54,6 +54,7 @@
 	<input type="submit" value="Buscar">
 </form>
 
+<<<<<<< HEAD
 Nombre  ${Nombre}
 Genero ${Genero}
 Documento:  ${nID}
@@ -63,6 +64,6 @@ Carrera: ${Carrera}
 Semestre: ${Semestre}
 Estado : ${Estado} </br>
 </br>
-<%= "Fecha: " %>                              
+                         
 </body>
 </html>
