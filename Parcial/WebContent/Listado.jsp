@@ -23,11 +23,10 @@
 	<td>PROMEDIO PONDERADO</td>
 	<td>ESTADO</td>
 	</tr>
-			<tr>
 	<c:forEach items="${nombres}" var="nombre">
-		<td>${nombre}</td>		
+
 		</c:forEach>
-								</tr>
+							
 		
 	</table>
 	Nombre: <input type="text"><br>
