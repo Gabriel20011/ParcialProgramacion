@@ -47,12 +47,13 @@ public class Controller extends HttpServlet {
 		request.setAttribute("fecha", fecha);
 		request.setAttribute("IP", ip);
 		String botonPresionado = request.getParameter("submit");
+		System.out.println(botonPresionado);
 		if (botonPresionado == null) {
 			RequestDispatcher miDis = request.getRequestDispatcher("/primera.jsp");
 			miDis.forward(request, response);
 		}
-		if (botonPresionado.equals("listadoCompleto")) {
-			System.out.println("Popo");
+		else if (botonPresionado.equals("listadoCompleto")) {
+			
 		}
 		else if (botonPresionado.equals("estadisticas")){
 			

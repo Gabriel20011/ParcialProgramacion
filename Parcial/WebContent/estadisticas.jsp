@@ -18,7 +18,7 @@
 		<option>Ingenieria Industrial</option>
 		<option>Bioingenieria</option>
 	</select> <br>
-	<form action="/Controller" name="estadisticaPorPrograma">
+	<form action="Controller" name="estadisticaPorPrograma">
 		<button>Consultar</button>
 	</form>
 	<h4>Carrera Seleccionada : ${CarreraSeleccionada}</h4> <br>
