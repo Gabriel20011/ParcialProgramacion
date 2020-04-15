@@ -47,5 +47,9 @@ public class Controller extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	public ArrayList<Estudiante> estatiditcas(String filtro){
+		
+	}
 
 }
